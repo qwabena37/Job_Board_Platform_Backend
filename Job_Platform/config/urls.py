@@ -21,7 +21,7 @@ from drf_yasg import openapi
 from rest_framework import permissions
 
 schema_view = get_schema_view(
-    openapi.Info(title="ALX Project Nexus API", default_version="v1"),
+    openapi.Info(title="ALX Project Nexus API_JOB_BOARD_PLATFORM", default_version="v1"),
     public=True,
     permission_classes=[permissions.AllowAny],
 )
