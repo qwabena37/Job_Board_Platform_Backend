@@ -20,3 +20,6 @@ class Job(models.Model):
     job_type = models.CharField(max_length=20)
     posted_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+class Meta:
+        ordering = ['-posted_date']
