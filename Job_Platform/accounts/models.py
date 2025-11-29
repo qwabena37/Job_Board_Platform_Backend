@@ -10,6 +10,6 @@ class User(AbstractUser):
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField('accounts.User', on_delete=models.CASCADE)
+    user = models.OneToOneField('accounts.User', on_delete=models.CASCADE, related_name="profile")
     bio = models.TextField(blank=True)
     phone = models.CharField(max_length=30, blank=True)
