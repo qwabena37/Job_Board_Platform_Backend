@@ -19,6 +19,7 @@ from django.urls import path, include
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import permissions
+from django.shortcuts import redirect
 
 schema_view = get_schema_view(
     openapi.Info(title="ALX Project Nexus API_JOB_BOARD_PLATFORM", default_version="v1"),
@@ -26,8 +27,11 @@ schema_view = get_schema_view(
     permission_classes=[permissions.AllowAny],
 )
 
+def root_redirect(request):
+    return redirect("/api/docs/")
 
 urlpatterns = [
+    path("", root_redirect),
     path('admin/', admin.site.urls),
     path("api/accounts/", include("accounts.urls")),
     path("api/", include("jobs.urls")),
