@@ -22,4 +22,4 @@ class Job(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 class Meta:
-        ordering = ['-posted_date']
+    ordering = ['-posted_date']
