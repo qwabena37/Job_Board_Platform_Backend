@@ -3,6 +3,6 @@ from django.urls import path, include
 from .views import ApplicationViewSet
 
 router = DefaultRouter()
-router.register("", ApplicationViewSet)
+router.register("", ApplicationViewSet, basename="applyjob")
 
 urlpatterns = [path("", include(router.urls))]
