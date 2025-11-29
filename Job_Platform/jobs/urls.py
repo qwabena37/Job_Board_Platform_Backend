@@ -6,6 +6,6 @@ router = DefaultRouter()
 router.register("industries", IndustryViewSet, basename="industry")
 router.register("locations", LocationViewSet, basename="location")
 router.register("companies", CompanyViewSet, basename="company")
-router.register("", JobViewSet, basename="jobs")
+router.register(r"jobs", JobViewSet, basename="jobs")
 
 urlpatterns = [path("", include(router.urls))]
