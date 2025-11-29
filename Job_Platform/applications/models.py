@@ -8,3 +8,6 @@ class ApplyJob(models.Model):
     cover_letter = models.TextField(blank=True)
     resume_url = models.URLField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+class Meta:
+        ordering = ['-created_at']  
